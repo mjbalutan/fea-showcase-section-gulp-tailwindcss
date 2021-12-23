@@ -1,0 +1,121 @@
+#fea_showcase {
+  @apply relative overflow-hidden w-full md:py-20 sm:py-10 text-center flex flex-col justify-center items-center min-h-screen text-white;
+  background: #212327;
+}
+#fea_showcase:before, #fea_showcase:after {
+  content: " ";
+  background-image: rgba(255, 255, 255, 0.7);
+  background: linear-gradient(180deg, rgba(255, 255, 255, 0.2) 0%, rgba(255, 255, 255, 0.1) 50%, rgba(255, 255, 255, 0) 100%);
+  width: 500px;
+  height: 500px;
+  clip-path: polygon(100% 0, 0% 100%, 100% 100%);
+  position: absolute;
+  z-index: 5;
+}
+#fea_showcase:before {
+  top: -400px;
+  left: -100px;
+  transform: scale(-1, 1);
+}
+#fea_showcase:after {
+  bottom: -450px;
+  right: -300px;
+  transform: scale(1.5, -1.5);
+}
+#fea_showcase h2 {
+  @apply text-3xl lg:text-2xl uppercase inline-block;
+  font-family: "CenturyGothic";
+}
+#fea_showcase h2:after {
+  @apply block w-3/4;
+  content: " ";
+  display: block;
+  background: #a21d21;
+  height: 5px;
+  margin: 30px auto;
+}
+#fea_showcase .fea-showcase-see-more {
+  @apply uppercase mt-12 sm:mt-6 px-5 py-3 font-bold border-2 relative z-30;
+  color: #9fa4ad;
+  background: linear-gradient(to left, #a21d21 50%, transparent 50%);
+  background-size: 200% 100%;
+  background-position: left bottom;
+  outline: none;
+  -webkit-transition: "all" "0.5s" "ease-in-out" "0s";
+  -moz-transition: "all" "0.5s" "ease-in-out" "0s";
+  transition: all 0.5s ease-in-out 0s;
+}
+#fea_showcase .fea-showcase-see-more:hover {
+  background-position: right bottom;
+  color: #ffffff;
+  border-color: #a21d21;
+  -webkit-transition: "all" "0.5s" "ease-in-out" "0s";
+  -moz-transition: "all" "0.5s" "ease-in-out" "0s";
+  transition: all 0.5s ease-in-out 0s;
+}
+#fea_showcase_grid {
+  @apply relative grid w-full grid-cols-4 lg:grid-cols-2 md:grid-cols-1 sm:grid-cols-1;
+}
+#fea_showcase_grid .grid-item {
+  aspect-ratio: 1;
+}
+#fea_showcase_grid .grid-item .fea-showcase-card {
+  @apply h-full p-3 bg-cover;
+  background-color: rgba(0, 0, 0, 0.6);
+  background-blend-mode: darken;
+  background-position: center center;
+}
+#fea_showcase_grid .grid-item .fea-showcase-card .fea-showcase-overlay {
+  @apply h-full w-full relative overflow-hidden;
+  clip-path: polygon(100% 0%, 50px 0%, 0% 50px, 0% 100%, 100% 100%);
+}
+#fea_showcase_grid .grid-item .fea-showcase-card .fea-showcase-overlay:after {
+  @apply absolute right-0 bottom-0 z-10;
+  content: " ";
+  width: 50px;
+  height: 50px;
+  background: rgba(213, 16, 22, 0.7);
+  clip-path: polygon(100% 0, 0% 100%, 100% 100%);
+  transform: scale(1, 1);
+  transform-origin: bottom right;
+}
+#fea_showcase_grid .grid-item .fea-showcase-card .fea-showcase-overlay .fea-showcase-content {
+  @apply absolute text-center w-full z-20;
+  padding-left: 1em;
+  padding-right: 1em;
+  top: 50%;
+  left: 50%;
+  -webkit-transform: translate(-50%, -50%);
+  -moz-transform: translate(-50%, -50%);
+  transform: translate(-50%, -50%);
+  -webkit-transition: "all" "0.3s" "ease-in-out" "0s";
+  -moz-transition: "all" "0.3s" "ease-in-out" "0s";
+  transition: all 0.5s ease-in-out 0s;
+}
+#fea_showcase_grid .grid-item .fea-showcase-card .fea-showcase-overlay .fea-showcase-content h3 {
+  @apply text-2xl lg:text-xl uppercase;
+  font-family: "CenturyGothic";
+}
+#fea_showcase_grid .grid-item .fea-showcase-card .fea-showcase-overlay .fea-showcase-content p {
+  @apply text-sm xl:text-lg hidden mx-auto mt-5;
+  font-family: "Open Sans", sans-serif;
+  width: 50%;
+  -webkit-transition: "display" "0.3s" "ease-in-out" "0s";
+  -moz-transition: "display" "0.3s" "ease-in-out" "0s";
+  transition: all 0.5s ease-in-out 0s;
+}
+#fea_showcase_grid .grid-item .fea-showcase-card .fea-showcase-overlay:hover:after {
+  transform: scale(2000%, 2000%);
+  -webkit-transition: "transform" "0.3s" "ease-in-out" "0s";
+  -moz-transition: "transform" "0.3s" "ease-in-out" "0s";
+  transition: all 0.5s ease-in-out 0s;
+}
+#fea_showcase_grid .grid-item .fea-showcase-card .fea-showcase-overlay:hover .fea-showcase-content {
+  top: 48%;
+}
+#fea_showcase_grid .grid-item .fea-showcase-card .fea-showcase-overlay:hover .fea-showcase-content p {
+  @apply block;
+  -webkit-transition: "display" "0.3s" "ease-in-out" "0s";
+  -moz-transition: "display" "0.3s" "ease-in-out" "0s";
+  transition: all 0.5s ease-in-out 0s;
+}
