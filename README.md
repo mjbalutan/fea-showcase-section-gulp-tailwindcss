@@ -2,7 +2,7 @@
 Made with Tailwind, Gulp.
 ## Get Started
 ### Clone the repo
-`git clone https://github.com/mjbalutan/fe-assessment.git`
+`git clone https://github.com/mjbalutan/fea-showcase-section-gulp-tailwindcss.git`
 
 ###  Install Dependencies
 `npm i`
