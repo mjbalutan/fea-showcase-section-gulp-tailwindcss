@@ -54,7 +54,7 @@
   transition: all 0.5s ease-in-out 0s;
 }
 #fea_showcase_grid {
-  @apply relative grid w-full grid-cols-4 lg:grid-cols-2 md:grid-cols-1 sm:grid-cols-1;
+  @apply relative grid w-full grid-cols-4 lg:grid-cols-2 md:grid-cols-2 sm:grid-cols-2;
 }
 #fea_showcase_grid .grid-item {
   aspect-ratio: 1;
@@ -93,16 +93,21 @@
   transition: all 0.5s ease-in-out 0s;
 }
 #fea_showcase_grid .grid-item .fea-showcase-card .fea-showcase-overlay .fea-showcase-content h3 {
-  @apply text-2xl lg:text-xl uppercase;
+  @apply text-2xl lg:text-xl sm:text-[16px] uppercase;
   font-family: "CenturyGothic";
 }
 #fea_showcase_grid .grid-item .fea-showcase-card .fea-showcase-overlay .fea-showcase-content p {
-  @apply text-sm xl:text-lg hidden mx-auto mt-5;
+  @apply text-sm xl:text-lg sm:text-[12px] hidden mx-auto mt-5;
   font-family: "Open Sans", sans-serif;
   width: 50%;
   -webkit-transition: "display" "0.3s" "ease-in-out" "0s";
   -moz-transition: "display" "0.3s" "ease-in-out" "0s";
   transition: all 0.5s ease-in-out 0s;
+}
+@media screen and (min-width: 320px) and (max-width: 767px) {
+  #fea_showcase_grid .grid-item .fea-showcase-card .fea-showcase-overlay .fea-showcase-content p {
+    width: 100%;
+  }
 }
 #fea_showcase_grid .grid-item .fea-showcase-card .fea-showcase-overlay:hover:after {
   transform: scale(2000%, 2000%);
